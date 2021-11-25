@@ -1,0 +1,4 @@
+Bundle-SymbolicName: com.curso.liferay.modulea.api
+Bundle-Version: 1.0.0
+
+Export-Package: com.curso.liferay.modulea.api

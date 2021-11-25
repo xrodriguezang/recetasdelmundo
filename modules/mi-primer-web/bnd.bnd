@@ -1,0 +1,4 @@
+Bundle-Name: mi-primer-web
+Bundle-SymbolicName: mi.primer.web
+Bundle-Version: 1.0.0
+Export-Package: mi.primer.web.constants

@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:recetasdelmundo:recetasdelmundo-sb:recetasdelmundo-sb-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+}
+
+buildService {
+	apiDir = "../recetasdelmundo-sb-api/src/main/java"
+}
+
+group = "com.cursoliferay.recetasdelmundo.sb"

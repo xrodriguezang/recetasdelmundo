@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.cursoliferay.recetasdelmundo.sb.model.Instruccion">
+		<field name="uuid" type="String" />
+		<field name="instruccionId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="descripcion" type="String" />
+		<field name="recetaId" type="long" />
+	</model>
+	<model name="com.cursoliferay.recetasdelmundo.sb.model.Receta">
+		<field name="uuid" type="String" />
+		<field name="recetaId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field localized="true" name="nombre" type="String" />
+		<field name="descripcion" type="String" />
+		<field name="numeroComensales" type="int" />
+		<field name="aptaCeliacos" type="boolean" />
+	</model>
+</model-hints>

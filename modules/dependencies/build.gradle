@@ -1,0 +1,19 @@
+dependencies {
+	compileOnly group: "org.osgi", name: "org.osgi.core", version: "6.0.0"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations", version: "1.3.0"
+
+	// S'afegeix la primera llibreria externa. No amb implementation.
+	// Afegeix les dependències transitives
+	compileInclude group: 'org.hibernate', name: 'hibernate-validator', version: '6.0.17.Final'
+	compileInclude group: 'com.thoughtworks.paranamer', name: 'paranamer', version: '2.8'
+	// ERROR que apareix:
+	// com.liferay.portal.kernel.log.LogSanitizerException: org.osgi.framework.BundleException: Could not resolve module: com.curso.liferay.moduleb.impl [1478]_  Unresolved requirement: Import-Package: com.thoughtworks.paranamer_ [Sanitized]
+	// Es van incrustant una a una.. Suposem que no trobem el .jar. Que no es troba a internet.
+	// com.liferay.portal.kernel.log.LogSanitizerException: org.osgi.framework.BundleException: Could not resolve module: com.curso.liferay.moduleb.impl [1494]_  Unresolved requirement: Import-Package: javax.money_ [Sanitized]
+
+	compileInclude group: 'javax.money', name: 'money-api', version: '1.0.3'
+	compileInclude group: 'joda-time', name: 'joda-time', version: '2.10.2'
+	compileInclude group: 'org.joda', name: 'joda-convert', version: '2.2.1'
+	compileInclude group: 'com.google.guava', name: 'guava', version: '27.1-jre'
+
+}

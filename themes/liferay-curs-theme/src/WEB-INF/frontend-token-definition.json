@@ -1,0 +1,42 @@
+{
+  frontendTokenCategories: [
+    {
+      label: "general",
+      name: "general",
+      frontendTokenSets: [
+        {
+          label: "wrapper",
+          name: "wrapper",
+          frontendTokens: [
+            {
+              name: "wrapper-background-color",
+              type: "String",
+              defaultValue: "#ffffff",
+              editorType: "ColorPicker",
+              label: "background-color",
+              mappings: [
+                {
+                  type: "cssVariable",
+                  value: "wrapper-background-color"
+                }
+              ]
+            },
+            {
+              name: "wrapper-color",
+              type: "String",
+              defaultValue: "#000000",
+              editorType: "ColorPicker",
+              label: "color",
+              mappings: [
+                {
+                  type: "cssVariable",
+                  value: "wrapper-color"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

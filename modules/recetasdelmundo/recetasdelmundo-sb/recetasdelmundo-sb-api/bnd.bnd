@@ -1,0 +1,10 @@
+Bundle-Name: recetasdelmundo-sb-api
+Bundle-SymbolicName: com.cursoliferay.recetasdelmundo.sb.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.cursoliferay.recetasdelmundo.sb.exception,\
+	com.cursoliferay.recetasdelmundo.sb.model,\
+	com.cursoliferay.recetasdelmundo.sb.service,\
+	com.cursoliferay.recetasdelmundo.sb.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../recetasdelmundo-sb-service/service.xml

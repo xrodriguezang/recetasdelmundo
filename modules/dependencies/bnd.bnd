@@ -1,0 +1,8 @@
+Bundle-SymbolicName: com.curso.liferay.dependencies
+Bundle-Version: 1.0.0
+
+Export-Package: *
+
+Import-Package: !javafx.beans.*,\
+                !org.jboss.logmanager.*,\
+                *

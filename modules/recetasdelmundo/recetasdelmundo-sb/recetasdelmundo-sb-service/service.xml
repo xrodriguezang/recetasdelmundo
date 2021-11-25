@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.cursoliferay.recetasdelmundo.sb">
+	<namespace>RDM</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity name="Receta" local-service="true" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="recetaId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="nombre" type="String" localized="true" />
+		<column name="descripcion" type="String" />
+		<column name="numeroComensales" type="int" />
+		<column name="aptaCeliacos" type="boolean" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="nombre" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="companyId" return-type="Collection">
+			<finder-column name="companyId" />
+		</finder>
+
+		<finder name="C_G" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="C_G_U" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+			<finder-column name="userId" />
+		</finder>
+
+<!--		Per indicar una clau primària amb dos camps-->
+		<finder name="C_M" return-type="Receta" unique="true">
+			<finder-column name="createDate" />
+			<finder-column name="modifiedDate" />
+		</finder>
+
+		<!-- References -->
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+
+<!--
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+-->
+
+	</entity>
+
+	<entity name="Instruccion" local-service="true" remote-service="false" uuid="true">
+
+		<column name="instruccionId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<column name="descripcion" type="String" />
+
+		<column name="recetaId" type="long" />
+
+		<finder name="recetaId" return-type="Collection">
+			<finder-column name="recetaId" />
+		</finder>
+
+	</entity>
+</service-builder>

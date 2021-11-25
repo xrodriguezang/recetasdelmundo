@@ -1,0 +1,4 @@
+Bundle-Name: recetasdelmundo-web
+Bundle-SymbolicName: com.cursoliferay.recetasdelmundo.web
+Bundle-Version: 1.0.0
+Export-Package: com.cursoliferay.recetasdelmundo.web.constants

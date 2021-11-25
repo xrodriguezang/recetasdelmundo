@@ -1,0 +1,11 @@
+dependencies {
+	compileOnly group: "org.osgi", name: "org.osgi.core", version: "6.0.0"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations", version: "1.3.0"
+
+	compileOnly project(":modules:moduleA:moduleA-api")
+
+	// Li estem dient que es en temps de compilació, no d'execució
+	// Si posem :
+	// compile project(":modules:moduleA:moduleA-api")
+	// Afegiria també el fitxer del moduleA, per tant, es perd la consistència
+}
